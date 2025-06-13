@@ -1,0 +1,25 @@
+﻿@model IEnumerable<View1ServiceStat>
+
+<p>Thống kê số lượt cấp phát dịch vụ trong năm, tháng, và tuần hiện tại.</p>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>ServiceName</th>
+            <th>TotalCurrentWeek</th>
+            <th>TotalCurrentMonth</th>
+            <th>TotalCurrentYear</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ServiceName</td>
+                <td>@item.TotalCurrentWeek</td>
+                <td>@item.TotalCurrentMonth</td>
+                <td>@item.TotalCurrentYear</td>
+            </tr>
+        }
+    </tbody>
+</table>

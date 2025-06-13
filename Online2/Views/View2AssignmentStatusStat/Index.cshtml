@@ -1,0 +1,25 @@
+﻿ @model IEnumerable<View2AssignmentStatusStat>
+
+@{
+    ViewData["Title"] = "Thống kê Trạng thái Cấp phát";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table table-bordered" style="max-width: 500px;">
+    <thead class="thead-light">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.First().UsageStatus)</th>
+            <th>@Html.DisplayNameFor(model => model.First().Total)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.UsageStatus)</td>
+                <td>@Html.DisplayFor(modelItem => item.Total)</td>
+            </tr>
+        }
+    </tbody>
+</table>
